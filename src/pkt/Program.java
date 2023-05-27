@@ -11,7 +11,7 @@ public class Program {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver", "/bin/chrome-driver/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "chrome-driver/chromedriver");
 		WebDriver surucu = new ChromeDriver();
 		surucu.manage().window().maximize();
 		surucu.get("https://www.barobirlik.org.tr/AvukatArama");
