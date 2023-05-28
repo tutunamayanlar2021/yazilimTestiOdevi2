@@ -1,3 +1,11 @@
+
+/** *
+* @author Kader Oral
+* @since  27.05.2023
+* <p>
+* Bu sınıfta açma kapama ile alakalı testler bulunmaktadır.
+* </p> */
+
 package pkt;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

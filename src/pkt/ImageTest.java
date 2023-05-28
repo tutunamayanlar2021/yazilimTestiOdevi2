@@ -3,7 +3,7 @@
 * @author Kader Oral
 * @since  27.05.2023
 * <p>
-* Bu sınıfta imaj testleriyle alakalı testler bulunmaktadır.
+* Bu sınıfta image testleriyle alakalı testler bulunmaktadır.
 * </p> */
 
 package pkt;

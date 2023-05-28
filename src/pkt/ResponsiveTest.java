@@ -1,3 +1,9 @@
+/** *
+* @author Kader Oral
+* @since  27.05.2023
+* <p>
+* Bu sınıfta responsivelik ile alakalı testler bulunmaktadır.
+* </p> */
 package pkt;
 
 import org.openqa.selenium.Dimension;
