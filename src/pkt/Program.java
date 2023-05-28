@@ -20,6 +20,7 @@ public class Program {
 
 		System.setProperty("webdriver.chrome.driver", "chrome-driver/chromedriver");
 		WebDriver surucu = new ChromeDriver();
+	
 		surucu.manage().window().maximize();
 		surucu.get("https://www.barobirlik.org.tr/AvukatArama");
 		PopUpTest popUpTestleri = new PopUpTest(surucu);
@@ -59,10 +60,11 @@ public class Program {
 				break;
 			case 5:
 				navigateTest.sayfaGecisTesti(AnasayfaUrl);
-				navigateTest.sayfaDegister(surucu, AnasayfaUrl);
+				navigateTest.sayfaDegister(AnasayfaUrl);
 				break;
 			case 6:
 				responsiveTest.changeScreenSize();
+				responsiveTest.mobileSimulationTest(AnasayfaUrl);
 				break;
 			case 0:
 				System.out.println("Programdan cikiliyor...");

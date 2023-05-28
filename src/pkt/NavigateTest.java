@@ -36,7 +36,7 @@ public class NavigateTest {
 		}
 	}
 
-	public void sayfaDegister(WebDriver driver, String anasayfaUrl) throws InterruptedException {
+	public void sayfaDegister( String anasayfaUrl) throws InterruptedException {
 
 		driver.get("https://d.barobirlik.org.tr/2023/Secmenler-Icin-Hukuk-Rehberi/");
 
