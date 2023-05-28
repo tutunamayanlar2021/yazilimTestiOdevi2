@@ -1,3 +1,10 @@
+/** *
+* @author Kader Oral
+* @since  27.05.2023
+* <p>
+* Bu sınıfta Form testleriyle alakalı testler bulunmaktadır.
+* </p> */
+
 package pkt;
 
 import org.openqa.selenium.By;
@@ -6,14 +13,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class FormTest {
-	 private WebDriver driver;
-	
+	private WebDriver driver;
 
-	    public FormTest(WebDriver driver) {
-	        this.driver = driver;
-	    }
-	//Dikkat burda ben robot degilim kutusunu manuel olarak isaretlemeniz gerekmektedir.aksi durumda program hata verir.
-	public  void avukatAra(String AnasayfaUrl) throws InterruptedException {
+	public FormTest(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	// Dikkat burda ben robot degilim kutusunu manuel olarak isaretlemeniz
+	// gerekmektedir.aksi durumda program hata verir.
+	public void avukatAra(String AnasayfaUrl) throws InterruptedException {
 		// Ad alanını doldur
 		WebElement adElement = driver.findElement(By.name("ad"));
 		adElement.sendKeys("Joe");
@@ -52,10 +60,10 @@ public class FormTest {
 			System.out.println("Kriterlere uyan avukat sayisi: " + sonuc1);
 		}
 		driver.navigate().to(AnasayfaUrl);
-		
 
 	}
-	public  void stajyerAvukatAra(String AnasayfaUrl) throws InterruptedException {
+
+	public void stajyerAvukatAra(String AnasayfaUrl) throws InterruptedException {
 		// Ad alanını doldur
 		WebElement adElement = driver.findElement(By.name("ad"));
 		adElement.sendKeys("Joe");
@@ -93,12 +101,12 @@ public class FormTest {
 		} else {
 			System.out.println("Kriterlere uyan stajyer avukat sayisi: " + sonuc);
 		}
-		
+
 		driver.navigate().to(AnasayfaUrl);
 
 	}
-	
-	public  void oturumAcmaTesti(String AnasayfaUrl) throws InterruptedException {
+
+	public void oturumAcmaTesti(String AnasayfaUrl) throws InterruptedException {
 
 		// Oturum acma sayfasına gidin
 		driver.get("https://www.uhap.com.tr/#/kullanici/giris/");

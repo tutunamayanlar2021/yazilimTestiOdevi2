@@ -1,4 +1,11 @@
+/** *
+* @author Kader Oral
+* @since  27.05.2023
+* <p>
+* main fonksiyonunun bulunduğu sınıf
+* </p> */
 package pkt;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -10,7 +17,7 @@ public class Program {
 	static String AnasayfaUrl = "https://www.barobirlik.org.tr/AvukatArama";
 
 	public static void main(String[] args) throws InterruptedException {
-		
+
 		System.setProperty("webdriver.chrome.driver", "chrome-driver/chromedriver");
 		WebDriver surucu = new ChromeDriver();
 		surucu.manage().window().maximize();
@@ -19,9 +26,8 @@ public class Program {
 		ImageTest imageTest = new ImageTest(surucu);
 		FormTest formTest = new FormTest(surucu);
 		FunctionTest functionTest = new FunctionTest(surucu);
-		NavigateTest navigateTest =new NavigateTest(surucu);
-		ResponsiveTest responsiveTest =new ResponsiveTest(surucu);
-
+		NavigateTest navigateTest = new NavigateTest(surucu);
+		ResponsiveTest responsiveTest = new ResponsiveTest(surucu);
 
 		Scanner scanner = new Scanner(System.in);
 		int choice;
@@ -39,20 +45,21 @@ public class Program {
 				imageTest.changeTextSize(AnasayfaUrl);
 				imageTest.getTBBDropdownItemCount();
 				imageTest.getMevzuatDropdownItemCount();
-				imageTest.haritayiBuyutKucult(surucu,AnasayfaUrl);
+				imageTest.haritayiBuyutKucult(surucu, AnasayfaUrl);
 				break;
 			case 3:
 				functionTest.listeSiralamaTesti();
 				functionTest.elemanSayisiTest();
 				functionTest.sayacGuncellemeTesti();
 				break;
-			case 4://dikkat ben robot degilim kutucugu manuel olarak isaretlenmelidir.aksi durumda program hata verir.
+			case 4:// dikkat ben robot degilim kutucugu manuel olarak isaretlenmelidir.aksi durumda
+					// program hata verir.
 				formTest.avukatAra(AnasayfaUrl);
 				formTest.oturumAcmaTesti(AnasayfaUrl);
 				break;
 			case 5:
 				navigateTest.sayfaGecisTesti(AnasayfaUrl);
-				navigateTest.sayfaDegister(surucu,AnasayfaUrl);
+				navigateTest.sayfaDegister(surucu, AnasayfaUrl);
 				break;
 			case 6:
 				responsiveTest.changeScreenSize();
@@ -69,26 +76,6 @@ public class Program {
 		surucu.quit();
 	}
 
-	// N11
-
-	/*
-	 * surucu.get("https://www.n11.com/uye-ol");
-	 * surucu.manage().window().maximize();
-	 * 
-	 * WebElement gun = surucu.findElement(By.id("birthDay")); Select gunSec = new
-	 * Select(gun); Thread.sleep(1000); gunSec.selectByValue("15");
-	 * 
-	 * WebElement ay = surucu.findElement(By.id("birthMonth")); Select aySec= new
-	 * Select(ay); Thread.sleep(1000); aySec.selectByValue("10");
-	 * 
-	 * WebElement yil = surucu.findElement(By.id("birthYear")); Select yilSec= new
-	 * Select(yil); Thread.sleep(3000); yilSec.selectByValue("2001");
-	 * 
-	 * Thread.sleep(1000); surucu.quit();
-	 */
-
-	
-
 	private static void printMenu() {
 		System.out.println("----------- Test Senaryolari -----------");
 		System.out.println("1. Pop-up Testlerini Calistir");
@@ -101,13 +88,5 @@ public class Program {
 		System.out.println("----------------------------------------");
 		System.out.print("Seciminizi yapin: ");
 	}
-
-	
-	
-
-	
-
-	
-
 
 }
