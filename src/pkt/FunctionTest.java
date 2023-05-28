@@ -80,5 +80,8 @@ public class FunctionTest {
 				System.out.println("Liste Düzensiz");
 			}
 		}
+		
+		
+		
 
 }

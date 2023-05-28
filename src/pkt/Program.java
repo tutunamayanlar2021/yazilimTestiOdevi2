@@ -39,6 +39,7 @@ public class Program {
 				imageTest.changeTextSize(AnasayfaUrl);
 				imageTest.getTBBDropdownItemCount();
 				imageTest.getMevzuatDropdownItemCount();
+				imageTest.haritayiBuyutKucult(surucu,AnasayfaUrl);
 				break;
 			case 3:
 				functionTest.listeSiralamaTesti();
@@ -51,6 +52,7 @@ public class Program {
 				break;
 			case 5:
 				navigateTest.sayfaGecisTesti(AnasayfaUrl);
+				navigateTest.sayfaDegister(surucu,AnasayfaUrl);
 				break;
 			case 6:
 				responsiveTest.changeScreenSize();

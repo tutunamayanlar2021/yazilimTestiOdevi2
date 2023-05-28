@@ -1,10 +1,11 @@
 package pkt;
 import java.util.List;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.Color;
-
+import org.openqa.selenium.interactions.Actions;
 public class ImageTest {
 	private  WebDriver driver;
 	
@@ -97,6 +98,36 @@ public class ImageTest {
         System.out.println("Mevuzat altinda avukata ozel "+itemCount+ " elaman bulundu.");
 	}
 	
-	
+	public  void haritayiBuyutKucult(WebDriver driver,String AnasayfaUrl) throws InterruptedException {
+       
+		 WebElement dropdownElement = driver.findElement(By.xpath("//a[@href='/Iletisim' and text()='İletişim']"));
+		 dropdownElement.click();
+        WebElement map = driver.findElement(By.xpath("//div[@class='yazialani']//div//iframe"));
+        Actions actions = new Actions(driver);
+
+        actions.moveToElement(map)
+                .click()
+                .sendKeys(Keys.ADD)
+                .sendKeys(Keys.ADD)
+                .sendKeys(Keys.ADD)
+                .sendKeys(Keys.ADD)
+                .perform();
+
+        Thread.sleep(3000);
+
+        actions.moveToElement(map)
+                .click()
+                .sendKeys(Keys.SUBTRACT)
+                .sendKeys(Keys.SUBTRACT)
+                .sendKeys(Keys.SUBTRACT)
+                .sendKeys(Keys.SUBTRACT)
+                .perform();
+
+        Thread.sleep(2000);
+        driver.navigate().to(AnasayfaUrl);
+        System.out.println("Test basarili");
+        
+	}
+
 
 }
