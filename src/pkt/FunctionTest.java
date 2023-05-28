@@ -85,5 +85,14 @@ public class FunctionTest {
 			System.out.println("Liste Düzensiz");
 		}
 	}
+	public void cevrimIciSayisi() {
+		List<WebElement> liste = driver.findElements(By.xpath("//div[@class= 'grid-container3']/ul/li"));
+		int sizeofList = liste.size();
+		
+	   if(sizeofList ==7) {
+		   System.out.println("Test basarili");
+	   }
+	}
+	
 
 }

@@ -52,6 +52,7 @@ public class Program {
 				functionTest.listeSiralamaTesti();
 				functionTest.elemanSayisiTest();
 				functionTest.sayacGuncellemeTesti();
+				functionTest.cevrimIciSayisi();
 				break;
 			case 4:// dikkat ben robot degilim kutucugu manuel olarak isaretlenmelidir.aksi durumda
 					// program hata verir.
